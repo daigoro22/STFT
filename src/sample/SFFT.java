@@ -5,16 +5,16 @@ package sample;
  */
 public class SFFT extends Thread implements Runnable
 {
-    private final int bit=16;
-    private final int hz=44100;
-    private final int MONO=1;
-    private final int N=1024;
+    protected final int bit=16;
+    protected final int hz=44100;
+    protected final int MONO=1;
+    protected final int N=1024;
 
-    private boolean isRunning=true;
-    private recorder rec=new recorder(bit,hz,MONO,N);
-    private Short[] rdata=new Short[N/2];
-    private FFT fft;
-    private Double[] FFTData;
+    protected boolean isRunning=true;
+    protected recorder rec=new recorder(bit,hz,MONO,N);
+    protected Short[] rdata=new Short[N/2];
+    protected FFT fft;
+    protected Double[] FFTData;
 
     @Override
     public void run() {

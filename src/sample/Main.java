@@ -7,8 +7,8 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    private SFFT sfft=new SFFT();
-    private spectrumAnl spec=new spectrumAnl(1024,1900,1800);
+    //private SFFT sfft=new SFFT();
+    private spectrumAnl spec=new spectrumAnl(1900,1800);
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -21,7 +21,7 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        sfft.start();
+        spec.start();
     }
 
 
@@ -32,6 +32,6 @@ public class Main extends Application {
     @Override
     public void stop()
     {
-        sfft.Stop();
+        spec.Stop();
     }
 }
